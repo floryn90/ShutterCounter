@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="shuttercounter">
+	<schema id="org.floryn90.shuttercounter" path="/org/floryn90/shuttercounter/">
+	</schema>
+</schemalist>

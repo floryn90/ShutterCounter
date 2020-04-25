@@ -1,0 +1,7 @@
+data/org.floryn90.shuttercounter.desktop.in
+data/org.floryn90.shuttercounter.appdata.xml.in
+data/org.floryn90.shuttercounter.gschema.xml
+src/window.ui
+src/main.py
+src/window.py
+

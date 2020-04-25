@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=shuttercounter
+Exec=shuttercounter
+Terminal=false
+Type=Application
+Categories=GTK;
+StartupNotify=true
