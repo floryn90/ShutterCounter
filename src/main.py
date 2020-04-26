@@ -35,7 +35,6 @@ class Application(Gtk.Application):
         win = self.props.active_window
         if not win:
             win = ShuttercounterWindow(application=self)
-
         win.present()
 
 def main(version):

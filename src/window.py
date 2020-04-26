@@ -17,16 +17,17 @@
 
 
 from gi.repository import Gtk
-
+from gi.repository import Gio, GObject
 import gphoto2 as gp
-from pprint import pprint
-import json
+import subprocess
 
 @Gtk.Template(resource_path='/org/floryn90/shuttercounter/window.ui')
 class ShuttercounterWindow(Gtk.ApplicationWindow):
     __gtype_name__ = 'ShuttercounterWindow'
+    window = ''
     camera_model_name = Gtk.Template.Child()
     shutter_counter_number = Gtk.Template.Child()
+    btn_update = Gtk.Template.Child()
 
     def get_camera_model():
         camera = gp.Camera()
@@ -73,13 +74,21 @@ class ShuttercounterWindow(Gtk.ApplicationWindow):
                 camera_shutter = ''
         return camera_shutter
 
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
+    def update_camera_info(self):
+        print("triggered")
+        subprocess.run(["gio", "mount", "-s", "gphoto2"])
         camera_model = ShuttercounterWindow.get_camera_model()
         shutter_count = ShuttercounterWindow.get_camera_shutter()
 
-        self.camera_model_name.set_label(camera_model)
+        ShuttercounterWindow.window.camera_model_name.set_label(camera_model)
         print("Camera Model => {}".format(camera_model))
-        self.shutter_counter_number.set_label(shutter_count)
+        ShuttercounterWindow.window.shutter_counter_number.set_label(shutter_count)
         print("Camera shutter count => {}".format(shutter_count))
+
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        ShuttercounterWindow.window = self
+        self.btn_update.connect("clicked", ShuttercounterWindow.update_camera_info)
+
         
