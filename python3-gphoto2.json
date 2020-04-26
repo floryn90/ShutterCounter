@@ -1,0 +1,17 @@
+{
+    "name": "python3-gphoto2",
+    "buildsystem": "simple",
+    "build-commands": [
+        "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} gphoto2"
+    ],
+    "sources": [
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/8f/fb/85d1954d3ce9ed9f1f4c55c5e927816259056e865f78f7baa0b140805d3b/gphoto2-2.2.2.tar.gz",
+            "sha256": "29f5944f8aa6e9d6110230143b73caf486471c7616885dd183a82c7b1fe0a369"
+        }
+    ],
+    "cleanup": [
+        "*"
+    ]
+}

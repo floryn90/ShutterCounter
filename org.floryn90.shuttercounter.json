@@ -1,7 +1,7 @@
 {
     "app-id" : "org.floryn90.shuttercounter",
-    "runtime" : "org.gnome.Platform",
-    "runtime-version" : "3.34",
+    "runtime" : "org.gnome.Sdk",
+    "runtime-version" : "3.36",
     "sdk" : "org.gnome.Sdk",
     "command" : "shuttercounter",
     "finish-args" : [
@@ -23,6 +23,17 @@
     ],
     "modules" : [
         {
+            "name" : "libgphoto2",
+            "sources" : [
+                {
+                    "type" : "archive",
+                    "url" : "https://downloads.sourceforge.net/project/gphoto/libgphoto/2.5.24/libgphoto2-2.5.24.tar.bz2",
+                    "sha256" : "fd3c578769f0fa389c1e68120f224bd98477aa3d82d16b82746c1266c0d4fb31"
+                }
+            ]
+        },
+        "python3-gphoto2.json",
+        {
             "name" : "shuttercounter",
             "builddir" : true,
             "buildsystem" : "meson",
@@ -31,7 +42,14 @@
                     "type" : "git",
                     "url" : "file:///home/floryn90/Projects/ShutterCounter"
                 }
+            ],
+            "config-opts" : [
+                "--prefix=/app"
             ]
         }
-    ]
+    ],
+    "build-options" : {
+        "env" : {
+        }
+    }
 }

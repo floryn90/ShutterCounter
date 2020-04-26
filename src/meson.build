@@ -17,6 +17,7 @@ conf.set('VERSION', meson.project_version())
 conf.set('localedir', join_paths(get_option('prefix'), get_option('localedir')))
 conf.set('pkgdatadir', pkgdatadir)
 
+
 configure_file(
   input: 'shuttercounter.in',
   output: 'shuttercounter',

@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=shuttercounter
 Exec=shuttercounter
+Comment="Read your DSLR's shutter counter"
 Terminal=false
 Type=Application
 Categories=GTK;
