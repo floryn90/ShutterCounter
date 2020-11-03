@@ -7,8 +7,8 @@
     "sources": [
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/8f/fb/85d1954d3ce9ed9f1f4c55c5e927816259056e865f78f7baa0b140805d3b/gphoto2-2.2.2.tar.gz",
-            "sha256": "29f5944f8aa6e9d6110230143b73caf486471c7616885dd183a82c7b1fe0a369"
+            "url": "https://files.pythonhosted.org/packages/bf/cd/b7151b75ad9288cbed3249afb83e36dbab79f6cb3bd752e5c8bf717e0ceb/gphoto2-2.2.3.tar.gz",
+            "sha256": "35d3ae97a9f13526746fb506de627a73328328528b436a51567fcb7e640883e9"
         }
     ],
     "cleanup": [

@@ -1,7 +1,7 @@
 {
     "app-id" : "org.floryn90.shuttercounter",
     "runtime" : "org.gnome.Sdk",
-    "runtime-version" : "3.36",
+    "runtime-version" : "3.38",
     "sdk" : "org.gnome.Sdk",
     "command" : "shuttercounter",
     "finish-args" : [
@@ -33,8 +33,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/GNOME/at-spi2-core/archive/AT_SPI2_CORE_2_36_0.tar.gz",
-                    "sha256": "a8d3235d01847783e51aa591143723cedadc26411eac2d256c7b713964e55735"
+                    "url": "https://github.com/GNOME/at-spi2-core/archive/AT_SPI2_CORE_2_38_0.tar.gz",
+                    "sha256": "89cdbb27d1af137cc8af5cc85c541cc81c55d33dffc8bfa595954be7814e3250"
                 }
             ]
         },
@@ -79,7 +79,7 @@
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "file:///home/floryn90/Projects/ShutterCounter"
+                    "url" : "https://github.com/floryn90/ShutterCounter.git"
                 }
             ]
         }
