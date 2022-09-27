@@ -33,8 +33,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/GNOME/at-spi2-core/archive/AT_SPI2_CORE_2_38_0.tar.gz",
-                    "sha256": "89cdbb27d1af137cc8af5cc85c541cc81c55d33dffc8bfa595954be7814e3250"
+                    "url": "https://github.com/GNOME/at-spi2-core/archive/AT_SPI2_CORE_2_46_0.tar.gz",
+                    "sha256": "59dcf9fe2e461bd3ec9454b037c08cc838d99e0865b4ae57df543e95be4502e3"
                 }
             ]
         },
@@ -43,8 +43,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/libusb/libusb/releases/download/v1.0.23/libusb-1.0.23.tar.bz2",
-                    "sha256": "db11c06e958a82dac52cf3c65cb4dd2c3f339c8a988665110e0d24d19312ad8d"
+                    "url": "https://github.com/libusb/libusb/releases/download/v1.0.26/libusb-1.0.26.tar.bz2",
+                    "sha256": "12ce7a61fc9854d1d2a1ffe095f7b5fac19ddba095c259e6067a46500381b5a5"
                 }
             ],
             "config-opts": [
@@ -61,8 +61,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://downloads.sourceforge.net/project/gphoto/libgphoto/2.5.24/libgphoto2-2.5.24.tar.bz2",
-                    "sha256" : "fd3c578769f0fa389c1e68120f224bd98477aa3d82d16b82746c1266c0d4fb31"
+                    "url" : "https://github.com/gphoto/libgphoto2/releases/download/v2.5.30/libgphoto2-2.5.30.tar.bz2",
+                    "sha256": "ee61a1dac6ad5cf711d114e06b90a6d431961a6e7ec59f4b757a7cd77b1c0fb4"
                 }
             ],
             "config-opts" : [
