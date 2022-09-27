@@ -27,7 +27,32 @@ class ShuttercounterWindow(Gtk.ApplicationWindow):
     window = ''
     camera_model_name = Gtk.Template.Child()
     shutter_counter_number = Gtk.Template.Child()
+    camera_serial_number = Gtk.Template.Child()
     btn_update = Gtk.Template.Child()
+
+    def get_camera_serial():
+        camera = gp.Camera()
+        hasCamInited = False
+        camera_serial = ''
+        try:
+            camera.init()
+            hasCamInited = True
+        except Exception as ex:
+            lastException = ex
+            print("No camera: {} {}; ".format( type(lastException).__name__, lastException.args))
+        if hasCamInited:
+            camera_config = camera.get_config()
+            # get the camera model
+            OK, camera_serial = gp.gp_widget_get_child_by_name(
+                camera_config, 'serialnumber')
+            if OK < gp.GP_OK:
+                OK, camera_serial = gp.gp_widget_get_child_by_name(
+                    camera_config, 'serialnumber')
+            if OK >= gp.GP_OK:
+                camera_serial = camera_serial.get_value()
+            else:
+                camera_serial = ''
+        return camera_serial
 
     def get_camera_model():
         camera = gp.Camera()
@@ -78,10 +103,13 @@ class ShuttercounterWindow(Gtk.ApplicationWindow):
         print("triggered")
         subprocess.run(["gio", "mount", "-s", "gphoto2"])
         camera_model = ShuttercounterWindow.get_camera_model()
+        camera_serial = ShuttercounterWindow.get_camera_serial()
         shutter_count = ShuttercounterWindow.get_camera_shutter()
 
         ShuttercounterWindow.window.camera_model_name.set_label(camera_model)
         print("Camera Model => {}".format(camera_model))
+        ShuttercounterWindow.window.camera_serial_number.set_label(camera_serial)
+        print("Camera serial number => {}".format(camera_serial))
         ShuttercounterWindow.window.shutter_counter_number.set_label(shutter_count)
         print("Camera shutter count => {}".format(shutter_count))
 
